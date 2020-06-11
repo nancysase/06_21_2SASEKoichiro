@@ -19,6 +19,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         AquariumInfo(iconName: "seaparadise", title: "あざらしシーパラダイス", url: "https://o-tower.co.jp/publics/index/37/"),
         AquariumInfo(iconName: "sanpiaza", title: "サンピアザ水族館", url: "http://www.sunpiazza-aquarium.com/index.html")
     ]
+    
+    //
 
 
     @IBOutlet weak var aquariumTable: UITableView!
@@ -51,6 +53,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        vc.aquariumInfo = infoLists[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let indexPath = self.tableView.indexPathForSelectedRow {
+//            let item = infoLists[indexPath.row]
+//            let controller = segue.destination as! DetailViewController
+//            controller.link = item.url
+//        }
+//    }
 
 
 }

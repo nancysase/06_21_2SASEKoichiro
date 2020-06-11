@@ -16,6 +16,9 @@
 		B9D06F92248DDA6900F7640A /* AquariumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D06F90248DDA6900F7640A /* AquariumTableViewCell.swift */; };
 		B9D06F93248DDA6900F7640A /* AquariumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D06F91248DDA6900F7640A /* AquariumTableViewCell.xib */; };
 		B9D06F9B248E3F7D00F7640A /* AquariumInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D06F9A248E3F7D00F7640A /* AquariumInfo.swift */; };
+		B9D06F9E248E49D100F7640A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D06F9D248E49D100F7640A /* WebKit.framework */; };
+		B9D06FA1248E4A2C00F7640A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D06F9F248E4A2C00F7640A /* DetailViewController.swift */; };
+		B9D06FA2248E4A2C00F7640A /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D06FA0248E4A2C00F7640A /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		B9D06F90248DDA6900F7640A /* AquariumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquariumTableViewCell.swift; sourceTree = "<group>"; };
 		B9D06F91248DDA6900F7640A /* AquariumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AquariumTableViewCell.xib; sourceTree = "<group>"; };
 		B9D06F9A248E3F7D00F7640A /* AquariumInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquariumInfo.swift; sourceTree = "<group>"; };
+		B9D06F9D248E49D100F7640A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		B9D06F9F248E4A2C00F7640A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B9D06FA0248E4A2C00F7640A /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9D06F9E248E49D100F7640A /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +55,7 @@
 			children = (
 				B9D06F7B248DD8A800F7640A /* AquariumTableApp */,
 				B9D06F7A248DD8A800F7640A /* Products */,
+				B9D06F9C248E49D100F7640A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,8 +80,18 @@
 				B9D06F85248DD8AA00F7640A /* Assets.xcassets */,
 				B9D06F87248DD8AA00F7640A /* LaunchScreen.storyboard */,
 				B9D06F8A248DD8AA00F7640A /* Info.plist */,
+				B9D06F9F248E4A2C00F7640A /* DetailViewController.swift */,
+				B9D06FA0248E4A2C00F7640A /* DetailViewController.xib */,
 			);
 			path = AquariumTableApp;
+			sourceTree = "<group>";
+		};
+		B9D06F9C248E49D100F7640A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9D06F9D248E49D100F7640A /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +154,7 @@
 			files = (
 				B9D06F89248DD8AA00F7640A /* LaunchScreen.storyboard in Resources */,
 				B9D06F86248DD8AA00F7640A /* Assets.xcassets in Resources */,
+				B9D06FA2248E4A2C00F7640A /* DetailViewController.xib in Resources */,
 				B9D06F93248DDA6900F7640A /* AquariumTableViewCell.xib in Resources */,
 				B9D06F84248DD8A800F7640A /* Main.storyboard in Resources */,
 			);
@@ -151,6 +170,7 @@
 				B9D06F81248DD8A800F7640A /* ViewController.swift in Sources */,
 				B9D06F7D248DD8A800F7640A /* AppDelegate.swift in Sources */,
 				B9D06F92248DDA6900F7640A /* AquariumTableViewCell.swift in Sources */,
+				B9D06FA1248E4A2C00F7640A /* DetailViewController.swift in Sources */,
 				B9D06F9B248E3F7D00F7640A /* AquariumInfo.swift in Sources */,
 				B9D06F7F248DD8A800F7640A /* SceneDelegate.swift in Sources */,
 			);
@@ -306,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cras-c.AquariumTableApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -324,7 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cras-c.AquariumTableApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

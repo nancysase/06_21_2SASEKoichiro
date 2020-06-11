@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PsQ-SC-Jln">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,24 +16,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bL4-2J-3Hn">
-                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="188" width="414" height="674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あざらしのいる北海道の水族館" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhm-Og-XEE">
+                                <rect key="frame" x="0.0" y="123" width="414" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="bL4-2J-3Hn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7z3-ft-3sz"/>
+                            <constraint firstItem="Fhm-Og-XEE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="A1Q-vd-0D8"/>
                             <constraint firstItem="bL4-2J-3Hn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="A53-qG-pBs"/>
                             <constraint firstItem="bL4-2J-3Hn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="CA2-mu-6EX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fhm-Og-XEE" secondAttribute="trailing" id="dac-YG-4sL"/>
+                            <constraint firstItem="Fhm-Og-XEE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oTh-sg-Vke"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bL4-2J-3Hn" secondAttribute="bottom" id="sRf-So-1TF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="NqV-KB-eaa"/>
                     <connections>
                         <outlet property="aquariumTable" destination="bL4-2J-3Hn" id="5V1-MF-0EK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844.92753623188412" y="128.57142857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XME-r6-hSU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PsQ-SC-Jln" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DTP-YU-Uy0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="f7s-RO-dVl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gbc-Ff-QE6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-65.217391304347828" y="128.57142857142856"/>
         </scene>
